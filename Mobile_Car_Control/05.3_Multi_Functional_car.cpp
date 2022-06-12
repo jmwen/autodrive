@@ -83,7 +83,7 @@ void handleControl(unsigned long value)
       Motor_Move(0,0,0,0);
       break;
     case 0xFF6897:// Receive the number '0'
-    case 0xCservo_adjust_angle1E57B:
+    case 0xC101E57B:
       servo_1_angle=servo_1_angle+servo_adjust_angle;
       Servo_1_Angle(servo_1_angle);
       break;
