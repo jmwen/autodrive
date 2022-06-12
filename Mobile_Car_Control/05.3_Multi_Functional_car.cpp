@@ -56,8 +56,8 @@ void handleControl(unsigned long value)
   // Handle the commands
   int pos_speed_value = 500;
   int neg_speed_value = -1 * pos_speed_value;
-  int pos_turn_value = 2000
-  int neg_turn_value = -1 * pos_turn_value
+  int pos_turn_value = 1000;
+  int neg_turn_value = -1 * pos_turn_value;
   int servo_adjust_angle = 5;
   switch (value) {
     case 0xFF02FD:// Receive the number '+'
