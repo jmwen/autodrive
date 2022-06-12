@@ -56,6 +56,8 @@ void handleControl(unsigned long value)
   // Handle the commands
   int pos_speed_value = 500;
   int neg_speed_value = -1 * pos_speed_value;
+  int pos_turn_value = 2000
+  int neg_turn_value = -1 * pos_turn_value
   int servo_adjust_angle = 5;
   switch (value) {
     case 0xFF02FD:// Receive the number '+'
@@ -68,13 +70,13 @@ void handleControl(unsigned long value)
       break;
     case 0xFFE01F:// Receive the number '|<<'
     case 0xF076C13B:
-      Motor_Move(neg_speed_value,neg_speed_value,pos_speed_value,pos_speed_value);
+      Motor_Move(neg_turn_value,neg_turn_value,pos_turn_value,pos_turn_value);
       delay(200);
       Motor_Move(0,0,0,0);
       break;
     case 0xFF906F:// Receive the number '>>|'
     case 0xE5CFBD7F:
-      Motor_Move(pos_speed_value,pos_speed_value,neg_speed_value,neg_speed_value);
+      Motor_Move(pos_turn_value,pos_turn_value,neg_turn_value,neg_turn_value);
       delay(200);
       Motor_Move(0,0,0,0);      
       break;
